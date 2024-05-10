@@ -8,7 +8,7 @@ import { ChartData } from "./types";
 
 export default function Chart({ data }: Readonly<ChartData>) {
   return (
-    <Paper className="flex h-48 p-2">
+    <Paper className="flex h-60 flex-col p-4">
       {/* Title */}
       <Typography component="h2" variant="h6" color="primary" gutterBottom>
         Today
