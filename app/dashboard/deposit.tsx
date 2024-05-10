@@ -2,7 +2,6 @@ import { Link, Paper, Typography } from "@mui/material";
 
 import { amountFormat, dateFormat } from "lib/format/format";
 
-import "./deposit.css";
 import { DepositData } from "./types";
 
 export default function Deposit({ data }: Readonly<DepositData>) {
@@ -15,7 +14,7 @@ export default function Deposit({ data }: Readonly<DepositData>) {
       <Typography component="p" variant="h4">
         {amountFormat(data.amount)}
       </Typography>
-      <Typography component="p" className="font-gray flex-1">
+      <Typography component="p" className="flex-1" color="text.secondary">
         {`on ${dateFormat(data.date, true)}`}
       </Typography>
       <div>
