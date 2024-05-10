@@ -28,6 +28,16 @@ export default function Navigation() {
         </ListItemIcon>
         <ListItemText primary="Hello" />
       </ListItemButton>
+      <ListItemButton
+        component={NextLink}
+        href="/dashboard"
+        selected={pathname === "/dashboard"}
+      >
+        <ListItemIcon>
+          <Dashboard />
+        </ListItemIcon>
+        <ListItemText primary="Dashboard" />
+      </ListItemButton>
     </List>
   );
 }
