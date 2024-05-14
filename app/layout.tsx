@@ -8,10 +8,12 @@ import { Provider } from "jotai";
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 
+import Lesson2Root from "components/containers/lesson2root";
+// import { theme } from "components/containers/root/theme";
+import { theme } from "components/containers/lesson2root/theme";
 import Modal from "components/containers/modal";
 import Notification from "components/containers/notification";
 import Root from "components/containers/root";
-import { theme } from "components/containers/root/theme";
 
 import "./globals.css";
 
@@ -33,7 +35,13 @@ export default function RootLayout({
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <StyledEngineProvider injectFirst>
-              {pathname.includes("auth") ? (
+              {pathname.includes("lesson2/auth") ? (
+                <Provider>{children}</Provider>
+              ) : pathname.includes("lesson2") ? (
+                <Provider>
+                  <Lesson2Root>{children}</Lesson2Root>
+                </Provider>
+              ) : pathname.includes("auth") ? (
                 <>{children}</>
               ) : (
                 <Provider>
