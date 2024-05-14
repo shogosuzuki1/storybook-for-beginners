@@ -10,7 +10,8 @@ import React from "react";
 import { setErrorMap } from "zod";
 
 import "../app/globals.css";
-import { theme } from "../components/containers/root/theme";
+// import { theme } from "../components/containers/root/theme";
+import { theme } from "../components/containers/lesson2root/theme";
 import customErrorMap from "../lib/validations";
 
 setErrorMap(customErrorMap);
