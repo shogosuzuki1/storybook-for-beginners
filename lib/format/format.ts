@@ -21,3 +21,7 @@ export function dateFormatYYYYMMDDForSlashSplit(date: Date) {
   });
   return formatter.format(date);
 }
+
+export function dateFormatYYYYMMDDForHyphenSplit(date: Date) {
+  return dateFormatYYYYMMDDForSlashSplit(date).replace(/\//g, "-");
+}
