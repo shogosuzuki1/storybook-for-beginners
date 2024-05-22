@@ -15,12 +15,12 @@ import { HolidayData } from "./types";
 
 export default function HolidayConfig({
   years = [],
-  publicHoliday,
-  holiday,
+  publicHolidays,
+  nationalHolidays,
 }: Readonly<{
   years: number[];
-  publicHoliday: HolidayData;
-  holiday: HolidayData;
+  publicHolidays: HolidayData;
+  nationalHolidays: HolidayData;
 }>) {
   return (
     <Container className="flex flex-col gap-y-5">
@@ -59,7 +59,7 @@ export default function HolidayConfig({
           </Typography>
         </Grid>
         <Grid item sm={9}>
-          <HolidayTable data={publicHoliday.data} />
+          <HolidayTable data={publicHolidays.data} />
         </Grid>
       </Grid>
       <Grid container>
@@ -69,7 +69,7 @@ export default function HolidayConfig({
           </Typography>
         </Grid>
         <Grid item sm={9}>
-          <HolidayTable data={holiday.data} />
+          <HolidayTable data={nationalHolidays.data} />
         </Grid>
       </Grid>
     </Container>
