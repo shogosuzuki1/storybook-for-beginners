@@ -1,18 +1,27 @@
+export interface Employee {
+  id: number;
+  charIconId?: number;
+  charIcon?: string;
+  name: string;
+  email: string;
+  password: string;
+  startDate: string;
+  phoneNumber: string;
+}
+
+export interface PartnerCompany {
+  id: number;
+  charIcon?: string;
+  name: string;
+  phoneNumber: string;
+}
+
 export interface EmployeeData {
-  data: {
-    id: number;
-    name: string;
-    email: string;
-    phoneNumber: string;
-  }[];
+  data: Employee[];
 }
 
 export interface PartnerCompanyData {
-  data: {
-    id: number;
-    name: string;
-    phoneNumber: string;
-  }[];
+  data: PartnerCompany[];
 }
 
 export type VIEW_MODE = "employee" | "partner-company";
