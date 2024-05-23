@@ -1,0 +1,21 @@
+.holiday {
+  @apply text-red-500;
+}
+
+.holiday .MuiButton-root {
+  color: currentcolor;
+
+  @apply bg-red-50;
+}
+
+.holiday .MuiTypography-root {
+  color: currentcolor;
+}
+
+.weekday .MuiButton-root {
+  color: currentcolor;
+}
+
+.weekday .MuiTypography-root {
+  color: currentcolor;
+}
